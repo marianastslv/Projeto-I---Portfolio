@@ -1,0 +1,235 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;700&display=swap");
+
+html {
+  font-size: 62.5%;
+}
+
+html::-webkit-scrollbar {
+  width: 1.4rem;
+}
+
+html::-webkit-scrollbar-track {
+  background: rgb(255, 255, 255);
+}
+
+html::-webkit-scrollbar-thumb {
+  background: #ff2e00;
+}
+
+body {
+  font-size: 10px;
+  font-family: "Nunito", sans-serif;
+  font-weight: 500;
+  text-align: center;
+}
+header,
+#about h1,
+#contact h1 {
+  border-bottom: 3px double black;
+  font-size: 35px;
+  padding-bottom: 10px;
+  font-weight: 600;
+}
+
+nav {
+  width: 70%;
+  margin: auto;
+  justify-content: space-around !important;
+}
+
+#navbar-screem-small {
+  display: none;
+}
+
+#navbar-screem-big h2 {
+  font-size: 25px;
+}
+
+span,
+ul li .list:hover,
+.btn {
+  color: #ff2e00;
+}
+
+ul {
+  display: flex;
+}
+
+ul li {
+  margin: 10px;
+  font-size: 15px;
+  text-transform: capitalize;
+}
+
+ul li a {
+  text-decoration: none;
+  color: black;
+  font-weight: 400;
+}
+
+section {
+  min-height: 100vh;
+  padding: 1rem;
+}
+
+#home {
+  display: flex;
+  justify-content: center;
+  flex-flow: column;
+  padding: 1rem 4rem;
+  text-align: left;
+}
+
+h2,
+span,
+#title-contact {
+  text-transform: capitalize;
+}
+#home h2,
+#about h1,
+#contact h1 {
+  font-size: 35px;
+  margin-bottom: 10px;
+}
+#home h1 {
+  font-size: 50px;
+  margin-bottom: 10px;
+}
+
+#home h3,
+#info h3,
+#contact h3 {
+  font-size: 25px;
+  margin-bottom: 10px;
+}
+
+#home button,
+.info button,
+form .btn {
+  text-transform: uppercase;
+  border: 1px solid #ff2e00;
+  border-radius: 20px;
+  padding: 0.8rem 2rem;
+  margin: 1.5rem 0;
+}
+
+#home button:hover,
+.info button:hover,
+form .btn:hover {
+  background-color: #ff2e00;
+  color: black;
+}
+.fas,
+.fab {
+  margin: 0 5px;
+}
+
+#about #container-about {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 1rem 0;
+}
+
+.info {
+  text-align: left;
+  flex: 0.7 30rem;
+  padding: 2rem 1rem;
+  padding-left: 6rem;
+}
+
+.fab,
+button {
+  font-size: 20px;
+}
+
+#info-img {
+  padding: 2rem 1rem;
+  width: 20rem;
+}
+img {
+  border-radius: 15% 45%;
+}
+
+#contact-info {
+  display: flex;
+  align-items: start;
+}
+
+form {
+  padding: 2rem 1rem;
+}
+
+input,
+textarea {
+  display: block;
+}
+
+#contact #contact-info form .box {
+  padding: 1.5rem;
+  margin: 1rem 0;
+  border: 1px solid #ff2e00;
+  border-radius: 20px;
+  color: rgb(0, 0, 0);
+  text-transform: none;
+  font-size: 1.7rem;
+  width: 100%;
+}
+
+#contact #contact-info form .box::placeholder {
+  color: #ff2e00;
+}
+@media screen and (max-width: 798px) {
+  #info button {
+    padding: 0.8rem 1rem;
+    margin: 1.5rem 0;
+  }
+  #info button {
+    margin: 0.5rem;
+  }
+
+  header {
+    border: none;
+  }
+  #navbar-screem-big {
+    display: none;
+  }
+  #navbar-screem-small {
+    width: 100%;
+    background-color: transparent !important;
+    display: flex;
+    background: white !important;
+  }
+  h5 {
+    font-size: 25px;
+  }
+  ul li {
+    font-size: 17px !important;
+    text-transform: capitalize !important;
+  }
+
+  ul li a:hover {
+    color: #ff2e00 !important;
+  }
+
+  .offcanvas-end {
+    position: fixed !important;
+    width: 265px !important;
+  }
+
+  #about #container-about {
+    flex-wrap: wrap-reverse;
+  }
+  #info-img {
+    padding: 2rem 0;
+  }
+
+  #info button {
+    margin: 0.5rem;
+  }
+
+  #contact-info {
+    display: block;
+  }
+}
