@@ -18,9 +18,11 @@
   </head>
   <body>
 
+    
     <!-- HEADER-->
-
     <header>
+  
+      <!-- NAVBAR SCREEM SMALL-->
 
       <nav id="navbar-screem-small" class="navbar navbar-reponsive navbar-light bg-light fixed-top">
         <div class="container-fluid">
@@ -32,7 +34,7 @@
           <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
             <div class="offcanvas-header">
               <h5 class="offcanvas-title" id="offcanvasNavbarLabel"><span>M</span>e<span>n</span>u</h5>
-              <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+              <button id="btn-close" type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
             </div>
             <div class="offcanvas-body">
               <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
@@ -50,6 +52,9 @@
           </div>
         </div>
       </nav>
+
+         <!-- NAVBAR SCREEM BIG-->
+
       <nav id="navbar-screem-big" class="navbar">
         <h2><span>M</span>ariana <span>S</span>antana</h2>
         <ul>
@@ -61,7 +66,6 @@
     </header>
 
     <!-- MAIN -->
-
     <main>
 
       <!-- SECTION HOME-->
@@ -69,7 +73,7 @@
       <section id="home">
         <h2>Olá <i class="far fa-hand-spock"></i> !</h2>
         <h1>Sou <span>Mariana</span>.</h1>
-        <h3>Front End Developer</h3>
+        <h2>Front End Developer</h3>
         <a href="#about"
           ><button class="btn">Sobre <i class="fas fa-user "></i></button
         ></a>
@@ -78,24 +82,24 @@
       <!-- SECTION ABOUT ME-->
 
       <section id="about">
-        <h1><span>S</span>obre</h1>
-
-      
-
+        <h1 class="heading"><span>S</span>obre</h1>
         <div id="container-about">
-          <div id="info" class="info">
-            <h3><span> nome : </span> Mariana Santana</h3>
-          <h3><span> idade : </span> 27</h3>
-          <h3><span> fomação : </span> engenharia civil</h3>
-          <h3><span> post : </span> front end developer</h3>
-          <a href="https://www.linkedin.com/in/mariana-santana/"
-            ><button class="btn">
-              Linkedin <i class="fab fa-linkedin"></i></button
-          ></a>
-          <a href="https://github.com/marianastslv"
-            ><button class="btn">
-              Github <i class="fab fa-github-square"></i></button
-          ></a>
+          <div id="info">
+            <div>
+              <h3><span> nome : </span> Mariana Santana</h3>
+              <h3><span> idade : </span> 27</h3>
+              <h3><span> fomação : </span> engenharia civil</h3>
+            </div>
+            <div>
+              <a href="https://www.linkedin.com/in/mariana-santana/"
+                ><button class="btn">
+                  Linkedin <i class="fab fa-linkedin"></i></button
+              ></a>
+              <a href="https://github.com/marianastslv"
+                ><button class="btn">
+                  Github <i class="fab fa-github-square"></i></button
+              ></a>
+            </div>
           </div>
 
         <div id="info-img" >
@@ -109,18 +113,17 @@
 
       <section id="contact">
         
-        <h1><span>c</span>ontato</h1>
+        <h1 class="heading"><span>c</span>ontato</h1>
 
       <div id="contact-info">
-          <div class="info">
-            <h3><i class="fas fa-envelope"></i> email@gmail.com</h3>
-            <h3><i class="fas fa-phone"></i> (99) 99999-9999</h3>
-            <h3><i class="fas fa-phone"></i> (99) 99999-9999</h3>
-            <h3>
+          <div id="info">
+            <h3 id="info-email"><i class="fas fa-envelope"></i> mariana@gmail.com</h3>
+            <h3 class="info"><i class="fas fa-phone"></i> (99) 99999-9999</h3>
+            <h3 class="info">
               <i class="fas fa-map-marker-alt"></i> Pernambuco, Brazil.
             </h3>
           </div>
-        <form  action="s.santana.mariana@gmail.com"
+        <form  action=""
         method="post"
         enctype="text/plain">
           <input type="text" placeholder="name" class="box" />
@@ -131,7 +134,7 @@
             cols="50"
             rows="10"
             class="box message"
-            placeholder="message"
+            placeholder="messagem"
           ></textarea>
           <button type="submit" class="btn">
             enviar <i class="fas fa-paper-plane"></i>

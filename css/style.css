@@ -23,13 +23,19 @@ body {
   font-weight: 500;
   text-align: center;
 }
-header,
-#about h1,
-#contact h1 {
+
+#navbar-screem-small {
+  display: none;
+}
+
+header {
   border-bottom: 3px double black;
   font-size: 35px;
-  padding-bottom: 10px;
+  padding-bottom: 1rem;
   font-weight: 600;
+  position: fixed;
+  width: 100%;
+  background: white;
 }
 
 nav {
@@ -38,12 +44,8 @@ nav {
   justify-content: space-around !important;
 }
 
-#navbar-screem-small {
-  display: none;
-}
-
 #navbar-screem-big h2 {
-  font-size: 25px;
+  font-size: 2.5rem;
 }
 
 span,
@@ -57,8 +59,9 @@ ul {
 }
 
 ul li {
-  margin: 10px;
-  font-size: 15px;
+  margin: 0.9rem;
+  margin-top: 1.2rem;
+  font-size: 1.8rem;
   text-transform: capitalize;
 }
 
@@ -73,97 +76,119 @@ section {
   padding: 1rem;
 }
 
+.btn {
+  padding: 0.7rem 2rem;
+  text-transform: uppercase;
+  background: #ffffff;
+  color: #ff2e00;
+  border: 1px solid #ff2e00;
+  margin-top: 1rem;
+  font-size: 1.4rem;
+  border-radius: 5rem;
+}
+
+.btn i {
+  padding: 0 0.5rem;
+  font-size: 1.4rem;
+}
+
+.btn:hover {
+  background: #ff2e00;
+}
+
+.heading {
+  text-align: center;
+  margin: 0 2rem 6rem;
+  font-size: 4rem;
+  padding: 1rem;
+  border-bottom: 0.1rem solid #fff4;
+  color: rgb(0, 0, 0);
+  border-bottom: 2px solid #bababa;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+.heading span {
+  color: #ff2e00;
+}
+
 #home {
   display: flex;
   justify-content: center;
   flex-flow: column;
-  padding: 1rem 4rem;
-  text-align: left;
+  padding: 0 10rem;
+  align-items: baseline;
 }
 
-h2,
-span,
-#title-contact {
-  text-transform: capitalize;
+#home h2 {
+  font-size: 2.5rem;
+  margin-bottom: 0.2rem;
 }
-#home h2,
-#about h1,
-#contact h1 {
-  font-size: 35px;
-  margin-bottom: 10px;
-}
+
 #home h1 {
-  font-size: 50px;
-  margin-bottom: 10px;
+  font-size: 4.7rem;
+  margin-bottom: 0.3rem;
 }
 
-#home h3,
-#info h3,
-#contact h3 {
-  font-size: 25px;
-  margin-bottom: 10px;
-}
-
-#home button,
-.info button,
-form .btn {
-  text-transform: uppercase;
-  border: 1px solid #ff2e00;
-  border-radius: 20px;
-  padding: 0.8rem 2rem;
-  margin: 1.5rem 0;
-}
-
-#home button:hover,
-.info button:hover,
-form .btn:hover {
-  background-color: #ff2e00;
-  color: black;
-}
-.fas,
-.fab {
-  margin: 0 5px;
+#home h1 span {
+  color: #ff2e00;
 }
 
 #about #container-about {
   display: flex;
-  align-items: flex-start;
   justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
   padding: 1rem 0;
 }
 
-.info {
+#about #container-about #info {
   text-align: left;
-  flex: 0.7 30rem;
-  padding: 2rem 1rem;
+  flex: 0.3 0.7 30rem;
+  padding: 3rem 1rem;
   padding-left: 6rem;
 }
 
-.fab,
-button {
-  font-size: 20px;
+#info h3 {
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  text-transform: capitalize;
 }
 
-#info-img {
-  padding: 2rem 1rem;
-  width: 20rem;
+#info h3 i {
+  color: #ff2e00;
 }
+
+#info .btn {
+  margin-right: 1rem;
+}
+
 img {
   border-radius: 15% 45%;
+  margin-top: 3rem;
 }
 
-#contact-info {
+#contact #contact-info {
   display: flex;
-  align-items: start;
+  align-items: flex-start;
+  flex-wrap: wrap;
 }
 
-form {
-  padding: 2rem 1rem;
+#contact #contact-info #info {
+  flex: 1 1 35rem;
+  padding-left: 4rem;
+  text-align: left;
 }
 
-input,
-textarea {
-  display: block;
+#contact #contact-info #info #info-email {
+  text-transform: lowercase;
+}
+
+#contact #contact-info form {
+  flex: 1 1 45rem;
+  text-align: left;
+  padding: 0 2rem;
+  margin: 0 2rem;
 }
 
 #contact #contact-info form .box {
@@ -180,15 +205,49 @@ textarea {
 #contact #contact-info form .box::placeholder {
   color: #ff2e00;
 }
-@media screen and (max-width: 798px) {
-  #info button {
-    padding: 0.8rem 1rem;
-    margin: 1.5rem 0;
-  }
-  #info button {
-    margin: 0.5rem;
+
+#contact #contact-info form .message {
+  height: 15rem;
+}
+
+footer {
+  padding: 1rem 0;
+}
+
+/*------MEDIA QUERIES MAX-WIDTH 690PX------*/
+
+@media (max-width: 690px) {
+  #about #container-about {
+    align-items: center;
+    flex-direction: column-reverse;
   }
 
+  #about #container-about #info {
+    text-align: left;
+    flex: 0.3 0.7 30rem;
+    padding: 2rem 1rem;
+    padding-left: 6rem;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+  }
+
+  #info h3 {
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    text-transform: capitalize;
+  }
+
+  img {
+    border-radius: 15% 45%;
+    margin-top: 3rem;
+  }
+}
+
+/*------MEDIA QUERIES MAX-WIDTH 576PX------*/
+
+@media (max-width: 576px) {
   header {
     border: none;
   }
@@ -200,6 +259,10 @@ textarea {
     background-color: transparent !important;
     display: flex;
     background: white !important;
+  }
+
+  .container-fluid {
+    margin-left: 4rem !important;
   }
   h5 {
     font-size: 25px;
@@ -213,23 +276,87 @@ textarea {
     color: #ff2e00 !important;
   }
 
+  .navbar-light .navbar-toggler {
+    color: transparent !important;
+  }
+
   .offcanvas-end {
     position: fixed !important;
     width: 265px !important;
   }
 
+  .offcanvas-header .btn-close {
+    padding: 0.5rem 0.5rem;
+    margin-top: 0;
+    margin-right: 0;
+    margin-bottom: -0.5rem;
+    font-size: 1.2rem;
+  }
+
+  .offcanvas-header #btn-close:active {
+    background-color: #f77b7b;
+    color: white !important;
+    border: 1px solid #f77b7b;
+  }
+
+  .offcanvas-header .btn-close:focus {
+    outline: none !important;
+    box-shadow: 0 0 0 0 !important;
+  }
+
+  .btn {
+    padding: 0.5rem 1.8rem;
+    font-size: 1.2rem;
+  }
+  .btn i {
+    font-size: 1.2rem;
+  }
+
+  #home {
+    padding: 0 2rem;
+  }
+
+  #home h2 {
+    font-size: 2.3rem;
+  }
+
+  #home h1 {
+    font-size: 4rem;
+  }
+
   #about #container-about {
-    flex-wrap: wrap-reverse;
-  }
-  #info-img {
-    padding: 2rem 0;
+    align-items: center;
+    flex-direction: column-reverse;
   }
 
-  #info button {
-    margin: 0.5rem;
+  #about #container-about #info {
+    text-align: left;
+    flex: 0.3 0.7 30rem;
+    padding: 2rem 1rem;
+    padding-left: 6rem;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
   }
 
-  #contact-info {
-    display: block;
+  #info h3 {
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    text-transform: capitalize;
+  }
+
+  img {
+    border-radius: 15% 45%;
+    margin-top: 3rem;
+  }
+
+  #info h3 {
+    font-size: 1.7rem;
+  }
+
+  #contact #contact-info form {
+    padding: 0 2rem;
+    margin: 0 2rem;
   }
 }
